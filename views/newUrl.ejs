@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <%- include('./partials/header.ejs') %>
+
+    <main style="margin: 1em">
+      <h3>Create TinyURL</h3>
+      <form class="form-inline" method="post" action="/urls/new">
+        <div class="form-group mb-2">
+          <label for="longUrl">Enter a URL:</label>
+          <input
+            name="longUrl"
+            id="longUrl"
+            class="form-control"
+            type="text"
+            placeholder="http://"
+            style="width: 300px; margin: 1em"
+          />
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </main>
+    <%- include('./partials/scripts.ejs') %>
+  </body>
+</html>
